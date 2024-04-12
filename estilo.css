@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Abhaya Libre';
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /*me permite deslizar cuando hago click en los links del menu*/ 
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header{
+    max-width: 1400px;
+    margin: auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo a{
+    font-family: 'Great Vibes';
+    font-size: 36px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+
+}
+
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color:#ffffff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contenedor-header header nav ul li a:hover{
+    color: #ffffff58;
+}
+
+/* NAV */
+
+.nav-responsive{
+    background-color:#ffffff58;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* de esta manera se oculta el elemento*/
+}
+
+/* SECCION INICIO */
+
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/Mis\ herramientas.jpg);
+    background-size: cover;
+    /*height: 100vh; /* vh (viewport height) es el porcentaje de pantalla, segun nª, ocupa cantidad de altura de la misma*/
+    height: 700px;
+    margin-top: 60px;
+    color: #ffffff;
+    display: flex;
+}
+
+.inicio .contenido-inicio{
+    padding: 20px;
+    /*background-color: #1e2326;*/
+    max-width: 900px;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.inicio .contenido-inicio .barra{
+    height: 6px;
+    width: 80%;
+    background-color: #191d1f;
+    margin-bottom: 30px;
+}
+
+.inicio .contenido-inicio h1{
+    font-family: 'Abhaya Libre';
+    font-size: 45px;
+}
+
+.inicio .contenido-inicio h2{
+    font-family: 'Abhaya Libre';
+    font-size: 30px;
+}
+
+.inicio .contenido-inicio p{
+    font-family: 'Abhaya Libre';
+    font-size: 20px;
+    text-align: center;
+}
+
+.grid-inicio{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:12% 8% 10% 60% 10%;
+    grid-template-areas: "a5 a2" 
+                         "a1 a2"
+                         "a3 a2"
+                         "a4 a2"
+                         "a6 a2";
+    justify-content: center;
+    align-content: center;
+}
+
+#a5{
+    grid-area: a5;
+    align-self: end;
+}
+
+#a1{
+    grid-area: a1;
+    align-self: center;
+}
+
+#a3{
+    grid-area: a3;
+    align-self: center;
+}
+
+#a4{
+    grid-area: a4;;
+}
+
+#a6{
+    grid-area: a6;
+    align-self: end;
+}
+
+#a2{
+    grid-area: a2;
+}
+
+.animate__animated animate__slideInLeft{
+    --animation-duration: 5s;
+}
+
+/* SECCION TRAYECTORIA */
+
+.trayectoria{
+    background-color: #252A2E;
+    color: #ffffff;
+    padding: 50px 20px;
+}
+
+.trayectoria .contenido-trayectoria{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.trayectoria h2{
+    font-size: 48px;
+    font-family:'Abhaya Libre';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.trayectoria .contenido-trayectoria .contenedor-texto{
+    margin: 20px;
+}
+
+.trayectoria .contenido-trayectoria .contenedor-texto p{
+    font-family: 'Abhaya Libre';
+    font-size: 20px;
+    text-align: justify;
+}
+
+.trayectoria .contenido-trayectoria .contenedor-texto p span{
+    font-weight: bold;
+}
+
+.trayectoria .contenido-trayectoria .contenedor-firma{
+    padding: 0px;
+    margin: 30px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.trayectoria .contenido-trayectoria .contenedor-firma p{
+    font-size: 30px;
+}
+
+
+/* SECCION HECHO A MANO */
+
+.hechoAmano{
+    background-color: #1e2326;
+    color: #ffffff;
+    padding: 30px 20px;
+    height: 900px;
+}
+
+.hechoAmano .contenido-hechoAmano{
+    max-width: 1100px;
+    margin: auto;
+    height: 800px;
+}
+
+.hechoAmano h2{
+    font-size: 48px;
+    font-family:'Abhaya Libre';
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px;
+}
+
+.hechoAmano .contenido-hechoAmano .barra{
+    height: 6px;
+    width: 80%;
+    background-color: #161a1c;
+    margin-bottom: 10px;
+}
+
+.hechoAmano .contenido-hechoAmano .contenedor-texto{
+    margin: 20px;
+}
+
+.hechoAmano .contenido-hechoAmano .contenedor-imagenes{
+    margin-top: 30px;
+}
+
+.hechoAmano .contenido-hechoAmano p{
+    font-family: 'Abhaya Libre';
+    font-size: 20px;
+    text-align: center;
+}
+
+.hechoAmano .contenido-hechoAmano .contenedor-texto p span{
+    font-weight: bold;
+}
+
+/* Carrousel */
+.container-carrousel{
+    position: relative;
+    width: 440px;
+    height: 580px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrouseles{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slider-section{
+    width: calc(100%/5);
+    height: 100%;
+}
+
+.slider-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Flechas del carrousel*/
+.leftArrow {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: transparent;
+    color: #ccc;
+    z-index: 1;
+    cursor: pointer;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+}
+
+.rightArrow {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: transparent;
+    color: #ccc;
+    z-index: 1;
+    cursor: pointer;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+    background-color:#333333d4;
+    color: #fff;
+}
+
+/* Puntos del carrousel */
+.container-puntos {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.items-puntos {
+    margin: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color:#ccc;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    list-style-type: none;
+}
+
+/*Clase para activar los puntos*/
+.items-puntos.activo {
+    background-color: #585656;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.grid-hechoAmano{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 10% 65% 10%;
+    grid-template-areas: "a1 a1"
+                         "a2 a4"
+                         "a2 a3"
+                         "a2 a5";
+    justify-content: center;
+    align-content: center; 
+    align-items: center;                    
+}
+
+#a1{
+    grid-area: a1;
+    align-self:center;
+}
+
+#a2{
+    grid-area: a2;
+    align-self: center;
+}
+
+#a3{
+    grid-area: a3;
+    align-self: center;
+}
+
+#a4{
+    grid-area: a4;
+    align-self: center;
+    justify-self: center;
+}
+
+#a5{
+    grid-area: a5;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+/* SECCION SASTRERÍA */
+
+.sastreria{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/fondoInicio.jpeg);
+    background-size: contain;
+    /*height: 100vh; /* vh (viewport height) es el porcentaje de pantalla, segun nª, ocupa cantidad de altura de la misma*/
+    height: 700px;
+    color: #ffffff;
+    display: flex;
+}
+
+.sastreria .contenido-sastreria{
+    max-width: 1100px;
+}
+
+.sastreria h2{
+    font-size: 48px;
+    font-family:'Abhaya Libre';
+    text-align: center;
+    padding: 10px 0;
+}
+
+.camisasAmedida{
+    background-color: #252A2E;
+    color: #ffffff;
+    padding: 50px 20px;
+    height: 700px;
+}
+
+.camisasAmedida .contenido-camisasAmedida{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.camisasAmedida h2{
+    font-size: 48px;
+    font-family:'Abhaya Libre';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.arreglosYreformas{
+    background-color: #1e2326;
+    color: #ffffff;
+    padding: 30px 20px;
+    height: 900px;
+}
+
+.arreglosYreformas .contenido-arreglosYreformas{
+    max-width: 1100px;
+    margin: auto;
+    height: 800px;
+}
+
+.arreglosYreformas h2{
+    font-size: 48px;
+    font-family:'Abhaya Libre';
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px;
+}
+
+.contacto{
+    background-color: #1e2326;
+    color: #ffffff;
+    padding: 30px 20px;
+    height: 900px;
+}
+
+.contacto .contenido-contacto{
+    max-width: 1100px;
+    margin: auto;
+    height: 800px;
+}
+
+.contacto h2{
+    font-size: 48px;
+    font-family:'Abhaya Libre';
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px;
+}
+
