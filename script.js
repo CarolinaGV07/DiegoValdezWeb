@@ -1,57 +1,86 @@
-const leftArrow = document.querySelector(".leftArrow"),
-      rightArrow = document.querySelector(".rightArrow"),
-      slider = document.querySelector("#slider"),
-      sliderSection = document.querySelectorAll(".slider-section"),
-      punto = document.querySelectorAll(".items-puntos");
+//SECCION HECHO A MANO - CARROUSEL
+let prev = document.querySelector(".leftArrow"),
+    next = document.querySelector(".rightArrow"),
+    slideImages = document.querySelectorAll(".slideImages"),
+    dots = document.querySelectorAll(".items-puntos");
 
-leftArrow.addEventListener("click", e => moveToLeft())
-rightArrow.addEventListener("click", e => moveToRight())
+let counter = 0
 
-setInterval(() => {
-    moveToRight()
-},3000);
-
-let operacion = 0
-    counter = 0
-    widthImg = 100 / sliderSection.length
-
-function moveToRight() {
-    if(counter >= sliderSection.length -1){
+//Next button(Right arrow)
+next.addEventListener("click", e => slideNext())
+function slideNext() {
+    slideImages[counter].style.animation = "next1 0.6s ease-in forwards"
+    if(counter >= slideImages.length-1){
         counter = 0
-        operacion = 0
-        slider.style.transform = `translate(-${operacion}%)`
-        slider.style.transition = "none";
-        return
     }
-    counter++
-    operacion = operacion + widthImg
-    slider.style.transform = `translate(-${operacion}%)`
-    slider.style.transition = "all ease .6s" 
+    else{
+        counter++
+    }
+    slideImages[counter].style.animation = "next2 0.6s ease-in forwards"
+    indicators()
 }
 
-function moveToLeft() {
-    counter--
-    if(counter < 0){
-        counter = sliderSection.length -1
-        operacion = widthImg * (sliderSection.length-1)
-        slider.style.transform = `translate(-${operacion}%)`
-        slider.style.transition = "none";
-        return
+//Prev button(Left arrow)
+prev.addEventListener("click", e => slidePrev())
+function slidePrev() {
+    slideImages[counter].style.animation = "prev1 0.6s ease-in forwards"
+    if(counter == 0){
+        counter = slideImages.length -1
     }
-    operacion = operacion - widthImg
-    slider.style.transform = `translate(-${operacion}%)`
-    slider.style.transition = "all ease .6s" 
+    else{
+        counter--
+    }
+    slideImages[counter].style.animation = "prev2 0.6s ease-in forwards"
+    indicators()
 }
 
-punto.forEach((cadaPunto, i) => {
-    punto[i].addEventListener('click', () => {
-        let posicion = i
-        let operando = posicion * -20
-        slider.style.transform = `translateX(${operando}%)`
+//Auto sliding
+function autosliding(){
+    deletInterval = setInterval(timer, 3000)
+    function timer(){
+        slideNext();
+        indicators();
+    }
+}
+autosliding();
 
-        punto.forEach((cadaPunto, i) => {
-            punto[i].classList.remove('activo')
-        })
-        punto[i].classList.add('activo')
-    })
+//Stop autosliding when mouse is over
+const container = document.querySelector(".container-carrousel");
+container.addEventListener("mouseover", function(){
+    clearInterval(deletInterval)
 })
+
+//Resume sliding when mouse is out
+container.addEventListener("mouseout", autosliding)
+
+//Add and remove active class to the indicators
+function indicators(){
+    for(i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace(" activo", "");
+    }
+    dots[counter].className += " activo";
+}
+
+/*
+//Add click event to the indicator
+function switchImage(currentImage){
+    currentImage.classList.add("activo")
+    let imageId = currentImage.getAttribute("attr")
+    if(imageId > counter){
+        slideImages[counter].style.animation = "next1 0.6s ease-in forwards"
+        counter = imageId
+        slideImages[counter].style.animation = "next2 0.6s ease-in forwards"
+    }
+    else if(imageId = counter){
+        return;
+    }
+    else{
+        slideImages[counter].style.animation = "prev1 0.6s ease-in forwards"
+        counter = imageId
+        slideImages[counter].style.animation = "prev2 0.6s ease-in forwards"
+    }
+    indicators()
+}
+*/
+
+
