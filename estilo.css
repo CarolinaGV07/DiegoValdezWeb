@@ -753,7 +753,7 @@ footer p{
 /* RESPONSIVE */
 
 /*@media mobile*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
 
     nav{
         display: none;
@@ -840,7 +840,7 @@ footer p{
 
      /* TRAYECTORIA */
     .trayectoria{
-        height: 600px;
+        height: 650px;
     }
 
     .trayectoria .contenido-trayectoria{
@@ -867,13 +867,13 @@ footer p{
     /* HECHO A MANO*/
     .hechoAmano{
         padding: 50px 20px;
-        height: 1100px;
+        height: 1150px;
     }
 
     .hechoAmano .contenido-hechoAmano{
-        height: 950px; 
+        height: 1000px; 
         max-width: 700px;      
-        margin: 0;
+        margin: 20px;
     }
     
     .hechoAmano h2{
@@ -979,7 +979,7 @@ footer p{
 
     /* ARREGLOS Y REFORMAS */
     .arreglosYreformas{
-        height: 950px;
+        height: 900px;
     }
 
     .arreglosYreformas .contenido-arreglosYreformas{
