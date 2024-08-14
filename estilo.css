@@ -753,7 +753,7 @@ footer p{
 /* RESPONSIVE */
 
 /*@media mobile*/
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width:370px) and (max-width: 720px) {
 
     nav{
         display: none;
@@ -785,11 +785,10 @@ footer p{
     .inicio{
         height: 900px;
         margin-top: 20px;
-        width:fit-content;
     }
 
     .inicio .contenido-inicio{
-        max-width: 500px;
+        max-width: 700px;
         padding: 10px;
     }
 
@@ -840,7 +839,7 @@ footer p{
 
      /* TRAYECTORIA */
     .trayectoria{
-        height: 650px;
+        height: 750px;
     }
 
     .trayectoria .contenido-trayectoria{
@@ -1121,15 +1120,108 @@ footer p{
         font-size: 28px;
     }
 
+    /* INICIO */
+    .inicio .contenido-inicio h1{
+        font-size: 35px;
+    }
+    
+    .inicio .contenido-inicio h2{
+        font-size: 25px;
+    }
+    
+    .inicio .contenido-inicio p{
+        font-size: 16px;
+    }
+
+    .inicio .contenido-inicio .contenedor-img img{
+        height: 500px;
+        margin-top: 10px;
+    }
+
+     /* TRAYECTORIA */
+     .trayectoria h2{
+        font-size: 35px;
+        padding: 10px 0;
+    }
+
+    .trayectoria .contenido-trayectoria .contenedor-texto p{
+        font-size: 18px;
+    }
+
+    .trayectoria .contenido-trayectoria .contenedor-firma{
+        margin: 20px;
+    }
+
+    .trayectoria .contenido-trayectoria .contenedor-firma p{
+        font-size: 20px;
+    }
+
+    /* HECHO A MANO*/
+    .hechoAmano{
+        height: 800px;
+        padding: 0;
+    }
+
+    .hechoAmano .contenido-hechoAmano{
+        height: 700px; 
+        max-width: 900px;      
+        width: auto;
+    }
+    
+    .hechoAmano h2{
+        font-size: 35px;
+        padding: 10px 0;
+        margin: 50px 0 30px 0;
+    }
+
+    .hechoAmano .contenido-hechoAmano .barra{
+        margin: 10px;
+    }
+
+    .hechoAmano .contenido-hechoAmano .contenedor-texto{
+        margin: 20px;
+    }
+    
+    .hechoAmano .contenido-hechoAmano p{
+        font-size: 16px;
+    }
+
+    .container-carrousel{
+        width: 300px;
+        height: 450px;
+    }
+
+    .grid-hechoAmano{
+        grid-template-rows: 15% 4% 77% 4%;
+    }
+
+    /* SASTRERIA*/
     .sastreria{
-        height: 2000px;
+        height: 600px;
+        text-align: center;
+    }
+
+    .sastreria .contenido-sastreria{
+        max-width: 1400px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sastreria h2{
+        font-size: 35px;
     }
 
     .sastreria .galeria{
         display: grid;
         gap:15px;
-        width: 100%;
+        width: auto;
+        margin: 30px ;
     }
+
+    .sastreria .galeria div{
+        text-align: center;
+    }
+
     .sastreria .galeria img{
         max-width: 80%;
     }
@@ -1137,12 +1229,30 @@ footer p{
         max-width: 85%;
     }
 
-    .arreglosYreformas{
-        height: 800px;
+    .sastreria .parrafo p{
+        font-size: 18px;
     }
 
+    /*ARREGLOS Y REFORMAS*/
+    .arreglosYreformas{
+        height: 700px;
+    }
+
+    .arreglosYreformas h2{
+        font-size: 35px;
+    }
+    
+    .arreglosYreformas .parrafo p{
+        font-size: 18px;
+    }
+
+    /*CONTACTO*/
     .contacto{
-        height: 790px;
+        height: 750px;
+    }
+
+    .contacto h2{
+        font-size: 35px;
     }
 }
 
