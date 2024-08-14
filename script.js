@@ -1,3 +1,22 @@
+let menuVisible = false;
+
+//Funcion que oculta o muestra el menú hamburguesa
+function mostrarOcultarMenu(){
+    if(menuVisible){
+        document.getElementById("nav").classList = "";
+        menuVisible = false;
+    }else{
+        document.getElementById("nav").classList = "responsive";
+        menuVisible = true;
+    }
+}
+
+//Oculto el menu hamburguesa una vez que selecciono una opción
+function seleccionar(){
+    document.getElementById("nav").classList = "";
+    menuVisible = false;
+}
+
 //SECCION HECHO A MANO - CARROUSEL
 let prev = document.querySelector(".leftArrow"),
     next = document.querySelector(".rightArrow"),
@@ -83,21 +102,3 @@ function switchImage(currentImage){
 }
 */
 
-let menuVisible = false;
-
-//Funcion que oculta o muestra el menú
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList = "";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList = "responsive";
-        menuVisible = true;
-    }
-}
-
-//Oculto el menu una vez que selecciono una opción
-function seleccionar(){
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
