@@ -7,6 +7,7 @@
     font-family: 'Abhaya Libre';
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 html{
@@ -66,12 +67,12 @@ body{
     text-decoration: none;
 }
 
+/* NAV */
+
 .contenedor-header header ul{
     display: flex;
     list-style: none;
 }
-
-/* NAV */
 
 .contenedor-header header nav ul li a{
     text-align: none;
@@ -785,26 +786,43 @@ footer p{
 /*@media mobile*/
 @media screen and (max-width: 767px) {
 
-    nav{
-        display: none;
-    }
     .nav-responsive{
         display: block;
     }
-    nav.responsive{
-        display: block;
-        position: absolute;
-        top: 60px;
-        right: 0;
+
+    .contenedor-header header ul{
+        flex-direction: column;
+        margin-right: 20px;
         background-color: #252A2E;
-        width: 250px;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 50%;
+        transition: left 0.3s;
     }
-    nav.responsive ul{
-        display: block !important;
+
+    .contenedor-header header nav ul li{
+        margin: 20px;
+        line-height: 20px;
     }
-    nav.responsive ul li{
-        border-bottom: 1px solid #fff;
-        padding: 10px 0;
+    
+    .contenedor-header header nav ul li a{
+        text-align: none;
+        color:#ffffff;
+        margin: 20px 15px;
+        padding: 20px 0;
+        transition: .5s;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .contenedor-header header nav ul li a:hover{
+        color: #ffffff58;
     }
 
     .contenedor-header header .logo a{
@@ -1130,32 +1148,49 @@ footer p{
 /*@media tablet*/
 @media screen and (min-width: 768px ) and (max-width:1023px){
 
-    nav{
-        display: none;
-    }
     .nav-responsive{
         display: block;
     }
-    nav.responsive{
-        display: block;
-        position: absolute;
-        top: 60px;
-        right: 0;
+
+    .contenedor-header header ul{
+        flex-direction: column;
+        margin-right: 20px;
         background-color: #252A2E;
-        width: 250px;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 50%;
+        transition: left 0.3s;
     }
-    nav.responsive ul{
-        display: block !important;
+
+    .contenedor-header header nav ul li{
+        margin: 20px;
+        line-height: 20px;
     }
-    nav.responsive ul li{
-        border-bottom: 1px solid #fff;
-        padding: 10px 0;
+    
+    .contenedor-header header nav ul li a{
+        text-align: none;
+        color:#ffffff;
+        margin: 20px 15px;
+        padding: 20px 0;
+        transition: .5s;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .contenedor-header header nav ul li a:hover{
+        color: #ffffff58;
     }
 
     .contenedor-header header .logo a{
         font-size: 28px;
     }
-
+    
     /* INICIO */
     .inicio .contenido-inicio h1{
         font-size: 35px;
