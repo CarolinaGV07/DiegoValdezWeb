@@ -12,7 +12,7 @@ function mostrarOcultarMenu(){
 //Oculto el menu hamburguesa una vez que selecciono una opción
 function seleccionar(){
     const nav = document.getElementById('nav');
-    if(window.innerWidth <= 768){
+    if(window.innerWidth <= 1036){
         nav.style.display = 'none';
     }
 }
